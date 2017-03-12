@@ -12,3 +12,7 @@ This is notes from coursera lecture: The Data Scientist’s Toolbox. Therefore, 
 * ls: list files and folders in the current directory
 * ls -a: list hidden and unhidden files and folders
 * ls -al: list details for hidden and unhidden files and folders
+* available.packages(): obtain information about available packages on CRAN
+* install.packages("slidify"): install slidify package
+* library(slidify): to load slidify package into R
+* search(): to list functions exported by package which one is loaded
