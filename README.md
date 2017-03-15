@@ -7,17 +7,17 @@ These notes are from coursera lectures: Data Science. Therefore, it is so person
 
 ###R Commands
 R has five atomic classes of objects: character, numeric, integer, complex, logical.
-* Main basic object of R is vector, objects of same class. 
-* List is a kind of vector which can contain different classes.
-* Matrices are vectors with a dimension attribute (e.g. matrix(nrow=r, ncol=c)). Entries can be thought of starting in the upper left corner and running down the columns (e.g. m<-1:10; dim(m)<-c(2,5)).
-* Factors are used to represent categorical data like an integer vector where each integer has a label (e.g. factor(c(T,F,T,F))).
-* Data frames are used to store tabular data. They are represented same lenght elements of the list and columns have names (e.g. data.frame(foo=1:4,bar=c(T,F,T,F)).
-
-
+Main basic object of R is vector, objects of same class. 
+List is a kind of vector which can contain different classes.
+Matrices are vectors with a dimension attribute (e.g. matrix(nrow=r, ncol=c)). Entries can be thought of starting in the upper left corner and running down the columns (e.g. m<-1:10; dim(m)<-c(2,5)).
+Factors are used to represent categorical data like an integer vector where each integer has a label (e.g. factor(c(T,F,T,F))).
+Data frames are used to store tabular data. They are represented same lenght elements of the list and columns have names (e.g. data.frame(foo=1:4,bar=c(T,F,T,F)).
 If you explicitly want an integer, need to specify L suffix (e.g. 1L).
 Inf represents infinity (e.g. 1/0=Inf).
 When coercion does not work, you get NA values. NA values have a class, so there are integer NA, character NA, etc.
 NaN represents an undefined value (e.g. 0/0=NaN). NaN is a NA but converse is not true.
+During reading data, using colClasses argument makes read.table run much faster.
+During reading data, setting nrow helps with memory usage.
 
 * [function]: information about the function
 * [?function]: help information about the function
@@ -28,6 +28,7 @@ NaN represents an undefined value (e.g. 0/0=NaN). NaN is a NA but converse is no
 * search(): to list functions exported by package which one is loaded
 * getwd(): to get current working directory
 * read.csv("mydata.csv"): to load mydata csv file
+* readLines(txt): to load txt text file
 * dir(): to list files on working directory
 * setwd("~/R-Programming"): to change working directory as R-Programming file
 * source("myfunction.R"): to laod myfunction function saved as myfunction.R
